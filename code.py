@@ -230,8 +230,7 @@ def I_calculation(n_of_webs, n_plates_top, n_plates_bottom, t, b_top, b_bot, dep
     # web free height (remove both top and bottom plate thicknesses)
     h_web = float(depth) - (n_plates_top + n_plates_bottom) * float(t)
     #print("h_web =", h_web)
-    if h_web <= 0:
-        raise ValueError("Invalid geometry: web height <= 0")
+    
 
     # areas (mm^2)
     A_web = float(n_of_webs) * float(t) * h_web
